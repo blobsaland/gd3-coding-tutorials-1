@@ -1,5 +1,6 @@
 body {
   font-family: "ABCRepro-Medium", Helvetica, Arial, sans-serif;
+  background-color: rgb(223, 181, 255);
 }
 
 .main {
@@ -13,8 +14,16 @@ body {
 }
 
 .list__item {
-  border-bottom: 1px solid black;
+  font-size: 20px;
+  border-bottom: 2px solid rgb(255, 98, 0);
   padding: 5px 0;
+  transition: 0.3s ease-in-out;
+  color: rgb(144 0 255);
+}
+
+.list__item:hover {
+  font-style: italic;
+  color: rgb(0, 0, 0);
 }
 
 .list__item__header {
@@ -25,10 +34,17 @@ body {
 }
 
 .list__item__artist {
-  font-size: 10px;
+  font-size: 15px;
   white-space: nowrap;
 }
 
 .list__item__body {
-  display: none;
+  height: 0;
+  overflow: scroll;
+  transition: height 0.3s ease-in-out;
+  /* transform: rotateX(-90deg) */
+}
+
+.clicked{
+  height: 140px;
 }
